@@ -1,7 +1,30 @@
+import {useDispatch, useSelector} from "react-redux";
+import {fetchList, selectList} from "../productsSlice";
+import {useEffect} from "react";
+
+
 export const ProductsList: React.FC = () => {
-    return(
+    const dispatch = useDispatch();
+    // @ts-ignore
+    const products = useSelector(selectList);
+
+    useEffect(() => {
+        dispatch(fetchList());
+    }, [dispatch]);
+
+    return (
         <div>
-            ProductsList
+            {products && products.map(({id, title}) => (
+                    <>
+                <span>
+                    {title}
+                </span>
+                        <span>
+            {id}
+                </span>
+                    </>
+                )
+            )}
         </div>
     )
 }
