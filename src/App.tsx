@@ -4,8 +4,8 @@ import {ProductsList} from "./featores/productsList/ProductsList";
 function App() {
   return (
     <div className="App">
-        <ProductsList />
       <div>
+          <ProductsList />
         nanana
       </div>
     </div>
