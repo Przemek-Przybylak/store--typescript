@@ -1,7 +1,7 @@
-export const apiConect = async (path: string) => {
-    const response = await fetch(`https://fakestoreapi.com/products/${path}`);
-    if (!response.ok) {
-        throw new Error(response.statusText);
-    }
-    return await response.json();
-};
+import axios from "axios";
+
+const apiConnect = axios.create({
+    baseURL: "https://fakestoreapi.com/"
+});
+
+export default apiConnect;
