@@ -1,11 +1,12 @@
 import {call, put, takeLatest} from "redux-saga/effects";
 import {fetchList, fetchListError, fetchListSuccess} from "./productsSlice";
-import {apiConect} from "../../common/apiConnect";
+import {fetchAllProducts} from "./fetchAllProducts.";
+import {ProductsListResponse} from "./models/ProductsListResponse";
 
 function* fetchListHandler() {
     try {
-        const products: {} = yield call(apiConect, "");
-        yield put(fetchListSuccess(products));
+        const results: ProductsListResponse[] = yield call(fetchAllProducts);
+        yield put(fetchListSuccess(results));
     } catch (error) {
         yield put(fetchListError());
     }
