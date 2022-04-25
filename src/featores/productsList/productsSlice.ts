@@ -1,24 +1,31 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {RootState} from "../../core/store";
+import {ProductsListResponse} from "./models/ProductsListResponse";
+import {ApiList} from "./models/ApiList";
+import {ProductsList} from "./ProductsList";
 
-export interface State {
+type AllProductsState = {
     status: string;
-    list: string[] | {} | null;
+    list: ProductsListResponse[];
+}
+
+const initialState: AllProductsState = {
+    status: `initial`,
+    list:
+        []
 }
 
 const listSlice = createSlice({
     name: `allProducts`,
-    initialState: {
-        status: `initial`,
-        list: {}
-    } as State,
+    initialState,
+
     reducers: {
         fetchList: (state) => {
             state.status = `loading`;
         },
-        fetchListSuccess: (state, {payload: list}) => {
+        fetchListSuccess: (state, {payload}: PayloadAction<ProductsListResponse[]>) => {
             state.status = `success`;
-            state.list = list;
+            state.list = payload;
         },
         fetchListError: (state) => {
             state.status = `error`
@@ -32,6 +39,6 @@ export const {
     fetchListError,
 } = listSlice.actions;
 
-export const selectList = (state: RootState) => state.list;
+export const selectList = (state: RootState) => state.list.list;
 
 export default listSlice.reducer;
