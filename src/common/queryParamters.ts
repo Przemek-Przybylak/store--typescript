@@ -2,12 +2,12 @@ import {useHistory, useLocation} from "react-router";
 
 export interface Key {
     key: string
-}
+};
 
 export interface ReplaceParameters {
     key: string,
     value: string,
-}
+};
 
 export const useQueryParameter = ({key}: Key )=> {
     const location = useLocation();
