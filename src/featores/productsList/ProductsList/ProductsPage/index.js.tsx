@@ -1,5 +1,4 @@
 import {Image, Product} from "../styled";
-import {ProductsListResponse} from "../../models/ProductsListResponse";
 
 interface props {
     id: number,
