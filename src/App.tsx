@@ -3,15 +3,15 @@ import {ProductsList} from "./featores/productsList/ProductsList";
 import {TopBar} from "./featores/topBar/TopBar/index.js";
 
 function App() {
-  return (
-    <div className="App">
-        <TopBar />
-      <div>
-          <ProductsList />
-        nanana
-      </div>
-    </div>
-  );
+    return (
+        <div className="App">
+            <TopBar/>
+            <div>
+                <ProductsList/>
+                nanana
+            </div>
+        </div>
+    );
 };
 
 export default App;
