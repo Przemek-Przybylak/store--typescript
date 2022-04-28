@@ -2,6 +2,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {fetchList, selectList} from "../productsSlice";
 import {Wrapper, Product, Image} from "./styled";
+import {ProductsPage} from "./ProductsPage/index.js";
 
 export const ProductsList: React.FC = () => {
     const dispatch = useDispatch();
@@ -23,12 +24,11 @@ export const ProductsList: React.FC = () => {
                                       description,
                                       image,
                                   }) => (
-                        <div key={id}>
-                            <Product>
-                                <Image src={image}/>
-                            </Product>
-                        </div>
-
+                        <ProductsPage
+                        id={id}
+                        category={category}
+                        image={image}
+                        />
                     ))}
             </Wrapper>
         </>
