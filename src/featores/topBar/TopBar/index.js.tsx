@@ -1,13 +1,17 @@
 import React from "react";
 import {Menu} from "../Menu";
 import {Search} from "../search/Search";
+import {Wrapper} from "./styled";
 
 export const TopBar: React.FC = () => {
     return(
-        <>
-            <Menu />
-            <Search />
-        TopBar
-        </>
+        <Wrapper>
+            <div>
+                <Menu />
+            </div>
+            <div>
+                <Search />
+            </div>
+        </Wrapper>
     )
 }
