@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.ul`
-  width: 90vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   list-style: none;
+  padding: 0;
+  overflow-y: hidden;
 `;
 
 export const Product = styled.li`
-  width: 500px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
