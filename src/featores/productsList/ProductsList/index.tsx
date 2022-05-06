@@ -15,7 +15,7 @@ export const ProductsList: React.FC = () => {
 
     return (
         <>
-            <TopBar />
+                <TopBar />
             <Wrapper>
                 {products &&
                     products.map(({
@@ -24,9 +24,9 @@ export const ProductsList: React.FC = () => {
                                       image,
                                   }) => (
                         <ProductsPage
-                        id={id}
-                        category={category}
-                        image={image}
+                            id={id}
+                            category={category}
+                            image={image}
                         />
                     ))}
             </Wrapper>
