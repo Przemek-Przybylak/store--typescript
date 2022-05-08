@@ -1,8 +1,6 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {RootState} from "../../core/store";
 import {ProductsListResponse} from "./models/ProductsListResponse";
-import {ApiList} from "./models/ApiList";
-import {ProductsList} from "./ProductsList";
 
 type AllProductsState = {
     status: string;
