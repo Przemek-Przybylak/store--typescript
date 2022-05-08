@@ -1,9 +1,14 @@
 import React from "react";
+import {CategoriesResponse} from "../models/categoriesResponse";
 
-export const Menu: React.FC = () => {
+interface props {
+    categories: CategoriesResponse[],
+}
+
+export const Menu: React.FC<props> = ({categories}) => {
   return(
       <>
-      Menu
+          <div>{categories}</div>
       </>
   )
 }
