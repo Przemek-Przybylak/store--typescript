@@ -3,7 +3,6 @@ import {useEffect} from "react";
 import {fetchList, selectList} from "../productsSlice";
 import {Wrapper} from "./styled";
 import {ProductsPage} from "./ProductsPage/index.js";
-import {TopBar} from "../../topBar/TopBar/index.js";
 
 export const ProductsList: React.FC = () => {
     const dispatch = useDispatch();
@@ -15,7 +14,6 @@ export const ProductsList: React.FC = () => {
 
     return (
         <>
-                <TopBar />
             <Wrapper>
                 {products &&
                     products.map(({
