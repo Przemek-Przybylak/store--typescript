@@ -1,5 +1,6 @@
 import React from "react";
 import {CategoriesResponse} from "../models/categoriesResponse";
+import {Wrapper} from "./styled";
 
 interface props {
     categories: CategoriesResponse[],
@@ -8,7 +9,7 @@ interface props {
 export const Menu: React.FC<props> = ({categories}) => {
   return(
       <>
-          <div>{categories}</div>
+          <Wrapper>{categories}</Wrapper>
       </>
   )
 }
