@@ -17,7 +17,7 @@ export const TopBar: React.FC = () => {
         <Wrapper>
             { categories &&
                 <div>
-                    <Menu categories={categories}/>
+                    <Menu categoriesList={categories}/>
                 </div>}
             <div>
                 <Search />
