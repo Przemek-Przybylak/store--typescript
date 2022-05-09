@@ -8,7 +8,7 @@ function App() {
             <TopBar />
             <div>
                 <ProductsList/>
-                nanana
+                waiting...
             </div>
         </div>
     );
