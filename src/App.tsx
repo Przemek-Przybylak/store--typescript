@@ -1,16 +1,16 @@
 import React from 'react';
-import { GlobalStyles } from './featores/GlobalStyles';
-import {ProductsList} from "./featores/productsList/ProductsList";
-import {TopBar} from "./featores/topBar/TopBar/index.js";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom"
+import { Homepage } from './featores/Homepage';
 
 function App() {
     return (
         <div className="App">
-            <GlobalStyles />
-            <TopBar />
-            <div>
-                <ProductsList/>
-            </div>
+          <HashRouter>
+          <Routes>
+                <Route path="/" element={<Homepage />} />
+                <Route path="category/name" element={<Homepage />} />
+            </Routes>
+          </HashRouter>
         </div>
     );
 };
