@@ -20,8 +20,9 @@ export const Image = styled.img`
   max-width: 400px;
   height: 300px;
   transition: 300ms;
+  background-color: inherit;
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 `;
