@@ -19,4 +19,9 @@ export const Product = styled.li`
 export const Image = styled.img`
   max-width: 400px;
   height: 300px;
+  transition: 300ms;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `;
