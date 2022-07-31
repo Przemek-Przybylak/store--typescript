@@ -7,14 +7,11 @@ interface props {
 }
 
 export const ProductsPage: React.FC<props> = ({id, category, image}) => {
-    const onMouseOver = () => {
-
-    }
 
     return (
         <div key={id}>
             <Product>
-                <Image title={category} onMouseOver={onMouseOver} src={image}/>
+                <Image title={category} src={image}/>
             </Product>
         </div>
     )
