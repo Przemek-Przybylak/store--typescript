@@ -1,5 +1,6 @@
-import { ProductsList } from "../productsList/ProductsList/";
-import { TopBar } from "../../common/topBar/TopBar/index.js.js";
+import { TopBar } from "../../common/topBar/TopBar/index.js"
+import { ProductsList } from "../productsList/ProductsList"
+
 
 export const Homepage: React.FC = () => {
 
