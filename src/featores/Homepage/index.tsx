@@ -1,13 +1,11 @@
-import { TopBar } from "../../common/topBar/TopBar/index.js"
-import { ProductsList } from "../productsList/ProductsList"
-
+import { TopBar } from "../../common/topBar/TopBar/index.js";
+import { AllProductsList } from "./AllProducts";
 
 export const Homepage: React.FC = () => {
-
-return (
-  <>
-  <TopBar />
-  <ProductsList/>
-  </>
-)
-}
+  return (
+    <>
+      <TopBar />
+      <AllProductsList />
+    </>
+  );
+};

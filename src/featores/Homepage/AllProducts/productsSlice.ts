@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {RootState} from "../../core/store";
+import {RootState} from "../../../core/store";
 import {ProductsListResponse} from "./models/ProductsListResponse";
 
 type AllProductsState = {
