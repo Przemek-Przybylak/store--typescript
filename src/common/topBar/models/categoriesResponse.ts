@@ -1,4 +1,3 @@
-export type CategoriesResponse = {
-    status: string;
-    categories: string;
-}
+export type CategoriesResponse = [
+    category: string
+]
