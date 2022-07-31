@@ -1,15 +1,20 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom"
+import { Switch } from 'react-router';
+import { Routes, Route, HashRouter, Router } from "react-router-dom"
 import { Homepage } from './featores/Homepage';
 
 function App() {
     return (
         <div className="App">
           <HashRouter>
-          <Routes>
-                <Route path="/" element={<Homepage />} />
-                <Route path="category/name" element={<Homepage />} />
-            </Routes>
+                <Switch>
+                <Route path="/">
+                <Homepage />
+                </Route>
+                <Route path="category/name">
+                <Homepage />
+                </Route>
+                </Switch>
           </HashRouter>
         </div>
     );
