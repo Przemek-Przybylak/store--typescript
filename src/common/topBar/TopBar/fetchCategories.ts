@@ -1,4 +1,4 @@
-import ApiConnect from "../../../common/apiConnect";
+import ApiConnect from "../../apiConnect";
 import {CategoriesResponse} from "../models/categoriesResponse";
 
 

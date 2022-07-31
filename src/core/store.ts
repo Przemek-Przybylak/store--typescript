@@ -1,7 +1,7 @@
 import {configureStore} from "@reduxjs/toolkit";
 import createSagaMiddleware from "@redux-saga/core";
 import listReducer from '../featores/productsList/productsSlice';
-import categoriesReducer from '../featores/topBar/TopBar/TopBarSlice'
+import categoriesReducer from '../common/topBar/TopBar/TopBarSlice'
 import {useDispatch} from "react-redux";
 import rootSaga from "./rootSaga";
 
