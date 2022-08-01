@@ -1,7 +1,7 @@
 import {call, put, takeLatest} from "redux-saga/effects";
 import {fetchList, fetchListError, fetchListSuccess} from "./productsSlice";
 import {fetchAllProducts} from "./fetchAllProducts.";
-import {ProductsListResponse} from "./models/ProductsListResponse";
+import {ProductsListResponse} from "../../../common/models/ProductsListResponse";
 
 function* fetchListHandler() {
     try {

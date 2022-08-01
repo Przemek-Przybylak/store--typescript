@@ -1,5 +1,5 @@
 import ApiConnect from "../../../common/apiConnect";
-import {ProductsListResponse} from "./models/ProductsListResponse";
+import {ProductsListResponse} from "../../../common/models/ProductsListResponse";
 
 export async function fetchAllProducts() {
     try {
