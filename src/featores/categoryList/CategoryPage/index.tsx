@@ -6,6 +6,8 @@ export const CategoryPage: React.FC = () => {
   const dispatch = useDispatch();
   const products = useSelector(selectList);
 
+  console.log(products);
+
   useEffect(() => {
     dispatch(fetchList());
   }, [dispatch]);

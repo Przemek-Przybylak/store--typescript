@@ -37,6 +37,6 @@ export const {
     fetchListError,
 } = listSlice.actions;
 
-export const selectList = (state: RootState) => state.list.list;
+export const selectList = (state: RootState) => state.category.list;
 
 export default listSlice.reducer;
