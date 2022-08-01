@@ -14,7 +14,7 @@ export const Menu: React.FC<props> = ({ categoriesList }) => {
         {categoriesList &&
           categoriesList.map((category) => (
             <Item>
-              <StyledLink to={`/`}>{category}</StyledLink>
+              <StyledLink to={`/category/${category}`}>{category}</StyledLink>
             </Item>
           ))}
       </Wrapper>
