@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchList, selectList } from "../categorySlice";
 
-export const CategoriesPage: React.FC = () => {
+export const CategoryPage: React.FC = () => {
   const dispatch = useDispatch();
   const products = useSelector(selectList);
 
