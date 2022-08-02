@@ -1,18 +1,30 @@
 import React from "react";
 import { ProductsListResponse } from "../models/ProductsListResponse";
-import { Image, Product } from "./styled";
+import { Image, ItemWrapper, Product, Wrapper } from "./styled";
 interface props {
   products: ProductsListResponse[];
+  categoryPage: boolean;
 }
-export const Tile: React.FC<props> = ({ products }) => {
+export const Tile: React.FC<props> = ({ products, categoryPage }) => {
   return (
     <>
-      {products &&
-        products.map(({ id, category, image }) => (
-          <Product key={id}>
-            <Image title={category} src={image} />
-          </Product>
-        ))}
+      <Wrapper>
+        {products && categoryPage
+          ? products.map(({ id, image, description, price, title }) => (
+              <ItemWrapper>
+                <Product key={id}>
+                  <Image src={image} />
+                  <span>{title}</span>
+                  <span>{price} $</span>
+                </Product>
+              </ItemWrapper>
+            ))
+          : products.map(({ id, image }) => (
+              <Product key={id}>
+                <Image src={image} />
+              </Product>
+            ))}
+      </Wrapper>
     </>
   );
 };
