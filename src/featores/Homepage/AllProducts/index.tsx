@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchList, selectList } from "./productsSlice";
 import { Wrapper } from "./styled";
-import { ProductsPage } from "../../productsList/ProductsList/ProductsPage/index.js";
+import { Tile } from "../../../common/Tile";
 
 export const AllProductsList: React.FC = () => {
   const dispatch = useDispatch();
@@ -15,10 +15,7 @@ export const AllProductsList: React.FC = () => {
   return (
     <>
       <Wrapper>
-        {products &&
-          products.map(({ id, category, image }) => (
-            <ProductsPage id={id} category={category} image={image} />
-          ))}
+        <Tile products={products} />
       </Wrapper>
     </>
   );

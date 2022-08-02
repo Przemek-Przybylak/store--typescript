@@ -1,15 +1,18 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Tile } from "../../../common/Tile";
 import { fetchList, selectList } from "../categorySlice";
 
 export const CategoryPage: React.FC = () => {
   const dispatch = useDispatch();
   const products = useSelector(selectList);
 
-  console.log(products);
-
   useEffect(() => {
     dispatch(fetchList());
   }, [dispatch]);
-  return <>category</>;
+  return (
+    <>
+      <Tile products={products} />
+    </>
+  );
 };
