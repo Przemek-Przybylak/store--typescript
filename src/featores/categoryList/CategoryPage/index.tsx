@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Tile } from "../../../common/Tile";
+import { TopBar } from "../../../common/topBar/TopBar";
 import { fetchList, selectList } from "../categorySlice";
 
 export const CategoryPage: React.FC = () => {
@@ -12,7 +13,8 @@ export const CategoryPage: React.FC = () => {
   }, [dispatch]);
   return (
     <>
-      <Tile products={products} />
+      <TopBar />
+      <Tile products={products} categoryPage={true} />
     </>
   );
 };
