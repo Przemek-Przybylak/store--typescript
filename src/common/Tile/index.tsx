@@ -1,5 +1,6 @@
 import React from "react";
 import { ProductsListResponse } from "../models/ProductsListResponse";
+import { StyledLink } from "../StyledLink";
 import { Image, ItemWrapper, Product, Wrapper } from "./styled";
 interface props {
   products: ProductsListResponse[];
@@ -19,9 +20,11 @@ export const Tile: React.FC<props> = ({ products, categoryPage }) => {
                 </Product>
               </ItemWrapper>
             ))
-          : products.map(({ id, image }) => (
+          : products.map(({ id, image, category }) => (
               <Product key={id}>
-                <Image src={image} />
+                <StyledLink to={`/category:${category}`}>
+                  <Image src={image} />
+                </StyledLink>
               </Product>
             ))}
       </Wrapper>

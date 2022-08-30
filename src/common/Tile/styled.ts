@@ -26,6 +26,7 @@ export const Product = styled.li`
 `;
 
 export const Image = styled.img`
+margin-bottom: 20px;
   max-width: 400px;
   height: 300px;
   transition: 300ms;
