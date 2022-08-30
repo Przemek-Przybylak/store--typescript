@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactComponent as logo } from "./pictures/logo.svg";
 
 export const Wrapper = styled.ul`
   padding: 0;
@@ -6,6 +7,7 @@ export const Wrapper = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: row;
+  align-items: center;
 
 `;
 
@@ -16,4 +18,9 @@ export const Item = styled.li`
   font-weight: 500;
   font-size: 25px;
   letter-spacing: 1.5px;
+  white-space: nowrap;
 `;
+
+export const Logo = styled(logo)`
+height:30px;
+`
