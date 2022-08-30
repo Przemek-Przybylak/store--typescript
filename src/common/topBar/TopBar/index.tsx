@@ -14,14 +14,8 @@ export const TopBar: React.FC = () => {
 
   return (
     <Wrapper>
-      {categories && (
-        <div>
-          <Menu categoriesList={categories} />
-        </div>
-      )}
-      <div>
-        <Search />
-      </div>
+      {categories && <Menu categoriesList={categories} />}
+      <Search />
     </Wrapper>
   );
 };
