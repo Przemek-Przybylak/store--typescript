@@ -1,7 +1,6 @@
-import React from "react";
 import { Switch } from "react-router";
 import { Route, HashRouter } from "react-router-dom";
-import { CategoryPage } from "./featores/categoryList/CategoryPage";
+import { CategoryPage } from "./featores/categoryPage";
 import { Homepage } from "./featores/Homepage";
 
 function App() {
