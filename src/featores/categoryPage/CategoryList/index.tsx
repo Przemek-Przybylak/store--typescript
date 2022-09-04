@@ -1,19 +1,19 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { selectPath } from "../../../common/commonSlice";
 import { Tile } from "../../../common/Tile";
-import { TopBar } from "../../../common/topBar/TopBar";
 import { fetchList, selectList } from "../categorySlice";
 
-export const CategoryPage: React.FC = () => {
+export const CategoryList: React.FC = () => {
   const dispatch = useDispatch();
   const products = useSelector(selectList);
+  const stateQuery = useSelector(selectPath);
 
   useEffect(() => {
     dispatch(fetchList());
-  }, [dispatch]);
+  }, [stateQuery]);
   return (
     <>
-      <TopBar />
       <Tile products={products} categoryPage={true} />
     </>
   );
