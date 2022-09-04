@@ -26,8 +26,8 @@ const categoriesSlice = createSlice({
             state.categoties = payload;
         },
         fetchListError: (state) => {
-            state.status = `error`
-        }
+            state.status = `error`;
+        },
     },
 });
 
