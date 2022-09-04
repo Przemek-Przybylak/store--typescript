@@ -11,7 +11,7 @@ export const Tile: React.FC<props> = ({ products, categoryPage }) => {
     <>
       <Wrapper>
         {products && categoryPage
-          ? products.map(({ id, image, description, price, title }) => (
+          ? products.map(({ id, image, price, title }) => (
               <ItemWrapper>
                 <Product key={id}>
                   <Image src={image} />
