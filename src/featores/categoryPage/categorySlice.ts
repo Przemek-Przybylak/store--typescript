@@ -10,7 +10,7 @@ type CategoryState = {
 const initialState: CategoryState = {
     status: `initial`,
     list:
-        []
+        [],
 }
 
 const listSlice = createSlice({
@@ -27,7 +27,7 @@ const listSlice = createSlice({
         },
         fetchListError: (state) => {
             state.status = `error`
-        }
+        },
     },
 });
 

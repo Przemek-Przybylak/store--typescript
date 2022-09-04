@@ -1,7 +1,7 @@
 import { all } from "@redux-saga/core/effects";
 import {watchFetchProducts} from "../featores/Homepage/AllProducts/productsSaga";
 import {watchFetchCategories} from "../common/topBar/TopBar/TopBarSaga";
-import { watchFetchCategory } from "../featores/categoryList/categorySaga";
+import { watchFetchCategory } from "../featores/categoryPage/categorySaga";
 
 export default function* rootSaga() {
 
