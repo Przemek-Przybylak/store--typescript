@@ -2,6 +2,7 @@ import { Switch } from "react-router";
 import { Route, HashRouter } from "react-router-dom";
 import { CategoryPage } from "./featores/categoryPage";
 import { Homepage } from "./featores/Homepage";
+import { ProductPage } from "./featores/productPage";
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
         <Switch>
           <Route path="/category:category">
             <CategoryPage />
+          </Route>
+          <Route path="/product:id">
+            <ProductPage />
           </Route>
           <Route path="/">
             <Homepage />

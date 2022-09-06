@@ -14,9 +14,11 @@ export const Tile: React.FC<props> = ({ products, categoryPage }) => {
           ? products.map(({ id, image, price, title }) => (
               <ItemWrapper>
                 <Product key={id}>
-                  <Image src={image} />
-                  <span>{title}</span>
-                  <span>{price} $</span>
+                  <StyledLink to={`/product:${id}`}>
+                    <Image src={image} />
+                    <span>{title}</span>
+                    <span>{price} $</span>
+                  </StyledLink>
                 </Product>
               </ItemWrapper>
             ))
