@@ -4,6 +4,7 @@ import listReducer from '../featores/Homepage/AllProducts/productsSlice';
 import categoriesReducer from '../common/topBar/TopBar/TopBarSlice';
 import categoryReducer from  '../featores/categoryPage/categorySlice';
 import pathReducer from '../common/commonSlice';
+import itemReducer from '../featores/productPage/productSlice'
 import {useDispatch} from "react-redux";
 import rootSaga from "./rootSaga";
 
@@ -15,6 +16,7 @@ export const store = configureStore({
         categories: categoriesReducer,
         category: categoryReducer,
         path: pathReducer,
+        item: itemReducer,
     },
     middleware: [sagaMiddleware],
 })
