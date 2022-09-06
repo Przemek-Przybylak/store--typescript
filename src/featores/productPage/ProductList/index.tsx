@@ -1,3 +1,13 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProductDetails, selectProduct } from "../productSlice";
+
 export const ProductList: React.FC = () => {
-  return <>Product</>;
+  const dispatch = useDispatch();
+  const product = useSelector(selectProduct);
+
+  useEffect(() => {
+    dispatch(fetchProductDetails());
+  }, []);
+  return <>{product.title}</>;
 };
