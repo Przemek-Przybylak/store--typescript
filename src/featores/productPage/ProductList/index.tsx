@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Tile } from "../../../common/Tile";
 import { fetchProductDetails, selectProduct } from "../productSlice";
 
 export const ProductList: React.FC = () => {
@@ -9,5 +10,9 @@ export const ProductList: React.FC = () => {
   useEffect(() => {
     dispatch(fetchProductDetails());
   }, []);
-  return <>{product.title}</>;
+  return (
+    <>
+      <Tile products={product} categoryPage={false} />
+    </>
+  );
 };
