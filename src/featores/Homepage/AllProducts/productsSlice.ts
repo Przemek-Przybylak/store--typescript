@@ -1,9 +1,10 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {RootState} from "../../../core/store";
 import {ProductsListResponse} from "../../../common/models/ProductsListResponse";
+import { Status } from "../../../common/models/status";
 
 type AllProductsState = {
-    status: string;
+    status: Status;
     list: ProductsListResponse[];
 }
 
