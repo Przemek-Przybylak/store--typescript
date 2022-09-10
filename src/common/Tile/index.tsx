@@ -1,7 +1,7 @@
 import React from "react";
 import { ProductsListResponse } from "../models/ProductsListResponse";
 import { StyledLink } from "../StyledLink";
-import { Image, ItemWrapper, Product, Wrapper } from "./styled";
+import { Image, Product, Wrapper, TextField, Span } from "./styled";
 interface props {
   products: ProductsListResponse | ProductsListResponse[];
   categoryPage: boolean;
@@ -9,38 +9,42 @@ interface props {
 export const Tile: React.FC<props> = ({ products, categoryPage }) => {
   return (
     <>
-      <Wrapper>
-        {products instanceof Array && categoryPage ? (
-          products.map(({ id, image, price, title }) => (
-            <ItemWrapper>
-              <StyledLink to={`/product:${id}`}>
-                <Product key={id}>
-                  <Image src={image} />
-                  <span>{title}</span>
-                  <span>{price} $</span>
-                </Product>
-              </StyledLink>
-            </ItemWrapper>
-          ))
-        ) : products instanceof Array ? (
-          products.map(({ id, image, category }) => (
-            <Product key={id}>
-              <StyledLink to={`/category:${category}`}>
+      {products instanceof Array && categoryPage ? (
+        <Wrapper>
+          {products.map(({ id, image, price, title }) => (
+            <StyledLink to={`/product:${id}`}>
+              <Product key={id}>
                 <Image src={image} />
-              </StyledLink>
-            </Product>
-          ))
-        ) : products instanceof Object ? (
-          <Product key={products.id}>
-            <Image src={products.image} />
-            <span>{products.title}</span>
-            <span>{products.id}</span>
-            <span>{products.description}</span>
-          </Product>
-        ) : (
-          ""
-        )}
-      </Wrapper>
+                <span>{title}</span>
+                <span>{price} $</span>
+              </Product>
+            </StyledLink>
+          ))}
+        </Wrapper>
+      ) : products instanceof Array ? (
+        <Wrapper>
+          {products.map(({ id, image, category }) => (
+            <StyledLink to={`/category:${category}`}>
+              <Product key={id}>
+                <Image src={image} />
+              </Product>
+            </StyledLink>
+          ))}
+        </Wrapper>
+      ) : products instanceof Object ? (
+        <Product vertical key={products.id}>
+          <Image src={products.image} />
+          <TextField>
+            <Span>
+              <Span>{products.title}</Span>
+            </Span>
+            <Span>{products.description}</Span>
+            <Span>Price: {products.price}</Span>
+          </TextField>
+        </Product>
+      ) : (
+        ""
+      )}
     </>
   );
 };
