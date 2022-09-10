@@ -45,5 +45,6 @@ export const {
 } = itemSlice.actions;
 
 export const selectProduct = (state: RootState) => state.item.product;
+export const selectStatus = (state: RootState) => state.item.status;
 
 export default itemSlice.reducer;

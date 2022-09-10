@@ -1,7 +1,8 @@
+import { ReactElement } from "react";
 import { Status } from "../models/status";
 import { StateContent, Wrapper } from "./styled";
 interface props {
-  children: React.FC;
+  children: React.FC | ReactElement;
   status: Status;
 }
 export const StateChecker: React.FC<props> = ({ children, status }) => {

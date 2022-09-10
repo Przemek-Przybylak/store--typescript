@@ -39,5 +39,6 @@ export const {
 } = listSlice.actions;
 
 export const selectList = (state: RootState) => state.category.list;
+export const selectStatus = (state: RootState) => state.category.status;
 
 export default listSlice.reducer;
