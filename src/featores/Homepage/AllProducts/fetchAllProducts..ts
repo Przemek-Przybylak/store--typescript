@@ -11,4 +11,4 @@ export async function fetchAllProducts() {
         const errorText: string = "Oops something went wrong...";
         return errorText;
     }
-}
+};

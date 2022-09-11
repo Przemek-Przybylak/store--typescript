@@ -6,7 +6,7 @@ import { Status } from "../../common/models/status";
 type CategoryState = {
     status: Status;
     product: ProductsListResponse;
-}
+};
 
 const initialState: CategoryState = {
     status: `initial`,
@@ -18,7 +18,7 @@ const initialState: CategoryState = {
       description: "string",
       image: ""
     },
-}
+};
 
 const itemSlice = createSlice({
     name: `product`,

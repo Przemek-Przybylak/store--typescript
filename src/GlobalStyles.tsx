@@ -11,5 +11,5 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
       transition: 300ms;
-    }
-`
+    };
+`;
