@@ -4,7 +4,7 @@ import { Input, Wrapper } from "./styled";
 export const Search: React.FC = () => {
   return (
     <Wrapper>
-      <Input />
+      <Input placeholder="Search product..." />
     </Wrapper>
   );
 };
