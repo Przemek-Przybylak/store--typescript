@@ -13,10 +13,6 @@ export const useQueryParameter = (key: Key)=> {
     return searchParams.get(key);
 };
  
- type Props ={
-    key: String;
-    value: String;
-}
 export const useReplaceQueryParameter = () => {
     const location = useLocation();
     const history = useHistory();
