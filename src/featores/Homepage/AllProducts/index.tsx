@@ -1,12 +1,22 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchList, selectList, selectStatus } from "./productsSlice";
+import {
+  fetchList,
+  selectList,
+  selectListByQuery,
+  selectStatus,
+} from "./productsSlice";
 import { Tile } from "../../../common/Tile";
 import { StateChecker } from "../../../common/StateChecker";
+import { useQueryParameter } from "../../../common/queryParamters";
+import { RootState } from "../../../core/store";
 
 export const AllProductsList: React.FC = () => {
   const dispatch = useDispatch();
-  const products = useSelector(selectList);
+  const query = useQueryParameter("search");
+  const products = useSelector((state: RootState) =>
+    selectListByQuery(state, query)
+  );
   const status = useSelector(selectStatus);
 
   useEffect(() => {

@@ -40,5 +40,12 @@ export const {
 
 export const selectList = (state: RootState) => state.list.list;
 export const selectStatus = (state: RootState) => state.list.status;
+export const selectListByQuery = (state: RootState, query: String | null) => {
+    const list = selectList(state);
+    if (!query || query.trim() === "") {
+        return list;
+    }
+    return list.filter(({title}) => title.toUpperCase().includes(query.trim().toUpperCase()));
+};
 
 export default listSlice.reducer;
