@@ -1,11 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import {
-  fetchList,
-  selectList,
-  selectListByQuery,
-  selectStatus,
-} from "./productsSlice";
+import { fetchList, selectListByQuery, selectStatus } from "./productsSlice";
 import { Tile } from "../../../common/Tile";
 import { StateChecker } from "../../../common/StateChecker";
 import { useQueryParameter } from "../../../common/queryParamters";
