@@ -18,7 +18,7 @@ export const ProductList: React.FC = () => {
   }, []);
   return (
     <StateChecker status={status}>
-      <Tile products={product} categoryPage={false} />
+      <Tile products={product} />
     </StateChecker>
   );
 };

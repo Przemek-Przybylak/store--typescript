@@ -4,12 +4,11 @@ import { StyledLink } from "../StyledLink";
 import { Image, Product, Wrapper, TextField, Span } from "./styled";
 interface props {
   products: ProductsListResponse | ProductsListResponse[];
-  categoryPage: boolean;
 }
-export const Tile: React.FC<props> = ({ products, categoryPage }) => {
+export const Tile: React.FC<props> = ({ products }) => {
   return (
     <>
-      {products instanceof Array && categoryPage ? (
+      {products instanceof Array ? (
         <Wrapper>
           {products.map(({ id, image, price, title }) => (
             <StyledLink to={`/product:${id}`}>
@@ -17,16 +16,6 @@ export const Tile: React.FC<props> = ({ products, categoryPage }) => {
                 <Image src={image} />
                 <span>{title}</span>
                 <span>{price} $</span>
-              </Product>
-            </StyledLink>
-          ))}
-        </Wrapper>
-      ) : products instanceof Array ? (
-        <Wrapper>
-          {products.map(({ id, image, category }) => (
-            <StyledLink to={`/category:${category}`}>
-              <Product key={id}>
-                <Image src={image} />
               </Product>
             </StyledLink>
           ))}

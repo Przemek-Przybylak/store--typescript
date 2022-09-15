@@ -21,7 +21,7 @@ export const AllProductsList: React.FC = () => {
   return (
     <>
       <StateChecker status={status}>
-        <Tile products={products} categoryPage={false} />
+        <Tile products={products} />
       </StateChecker>
     </>
   );

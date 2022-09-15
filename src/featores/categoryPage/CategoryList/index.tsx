@@ -22,7 +22,7 @@ export const CategoryList: React.FC = () => {
   return (
     <>
       <StateChecker status={status}>
-        <Tile products={products} categoryPage={true} />
+        <Tile products={products} />
       </StateChecker>
     </>
   );
