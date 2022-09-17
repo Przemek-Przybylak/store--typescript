@@ -12,7 +12,6 @@ interface props {
 
 export const Menu: React.FC<props> = ({ categoriesList }) => {
   const currentQuery: string = useParams();
-  const stateQuery = useSelector(selectPath);
   const dispatch = useDispatch();
 
   useEffect(() => {
