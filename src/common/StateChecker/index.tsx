@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { Status } from "../models/status";
-import { StateContent, Wrapper } from "./styled";
+import { Ring, Span, StateContent, Wrapper } from "./styled";
 interface props {
   children: React.FC | ReactElement;
   status: Status;
@@ -10,11 +10,16 @@ export const StateChecker: React.FC<props> = ({ children, status }) => {
     <>
       {status === "loading" ? (
         <Wrapper>
-          <StateContent>Loading..</StateContent>
+          <StateContent>
+            <Ring></Ring>
+            <Span>Loading...</Span>
+          </StateContent>
         </Wrapper>
       ) : status === "error" ? (
         <Wrapper>
-          <StateContent>Oooopss... something went wrong</StateContent>
+          <StateContent>
+            <Span>http://localhost:3001/store--typescript#</Span>
+          </StateContent>
         </Wrapper>
       ) : (
         children
