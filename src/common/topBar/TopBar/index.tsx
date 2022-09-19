@@ -4,9 +4,12 @@ import { Search } from "../search/Search";
 import { Wrapper } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchList, selectList } from "./TopBarSlice";
+import { useLocation, useParams } from "react-router";
+import { Button } from "../../Button";
 
 export const TopBar: React.FC = () => {
   const dispatch = useDispatch();
+  const query = useLocation();
   const categories = useSelector(selectList);
   useEffect(() => {
     dispatch(fetchList());
@@ -15,7 +18,7 @@ export const TopBar: React.FC = () => {
   return (
     <Wrapper>
       {categories && <Menu categoriesList={categories} />}
-      <Search />
+      {query.pathname.includes(`product`) ? <Button /> : <Search />}
     </Wrapper>
   );
 };
