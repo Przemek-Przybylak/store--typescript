@@ -4,6 +4,7 @@ export const GlobalStyles = createGlobalStyle`
 
       html{
         box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
     };
     *, ::after, ::before {
         box-sizing: inherit;
@@ -11,5 +12,5 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
       transition: 300ms;
-    };
+      };
 `;
