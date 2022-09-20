@@ -1,24 +1,24 @@
 import styled, { keyframes } from "styled-components";
+import { theme } from "../../core/theme";
 
 export const ring = keyframes`
 0%{
   transform: rotate(0deg);
-  box-shadow:1px 5px 2px #e65c00;
+  box-shadow:1px 5px 2px ${theme.color.moonstoneBlue};
 }
 50%{
   transform: rotate(180deg);
-  box-shadow:1px 5px 2px #18b201;
+  box-shadow:1px 5px 2px ${theme.color.macaroniAndCheese};
 }
 100%{
   transform: rotate(360deg);
-  box-shadow:1px 5px 2px #0456c8;
+  box-shadow:1px 5px 2px ${theme.color.oceanGreen};
 }
 `
 
 export const Wrapper = styled.section`
   margin: 0;
   padding: 0;
-  font-family: montserrat;
   background: inherit;
   color: black;
 `;
