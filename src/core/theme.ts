@@ -4,6 +4,7 @@ export const theme = {
     moonstoneBlue:"#B78277",
     macaroniAndCheese: "#97DFF8",
     oceanGreen: "#3FC495",
+    lightGrey: "#dbdbdb",
   },
   breakpoint: {
     mobileMax: "767px",
