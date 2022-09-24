@@ -9,7 +9,7 @@ export const Wrapper = styled.ul`
   gap:20px;
   margin: 20px auto;
   list-style: none;
-  padding: 0 20px;
+  padding: 20px;
   overflow-y: hidden;
   max-width: 1000px;
   align-items:center;
