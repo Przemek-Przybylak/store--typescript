@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../../core/theme";
 import { ReactComponent as logo } from "./pictures/logo.svg";
 
 export const Wrapper = styled.ul`
@@ -8,7 +9,6 @@ export const Wrapper = styled.ul`
   display: flex;
   flex-direction: row;
   align-items: center;
-
 `;
 
 export const Item = styled.li`
@@ -23,4 +23,5 @@ export const Item = styled.li`
 
 export const Logo = styled(logo)`
 height:30px;
+fill: ${theme.color.macaroniAndCheese};
 `
