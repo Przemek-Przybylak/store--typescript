@@ -12,5 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
       transition: 300ms;
+      margin: 0;
+      padding: 0;
       };
 `;
