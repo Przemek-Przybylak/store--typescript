@@ -9,7 +9,7 @@ export const Wrapper = styled.ul`
   gap:20px;
   margin: 20px auto;
   list-style: none;
-  padding: 0;
+  padding: 0 20px;
   overflow-y: hidden;
   max-width: 1000px;
   align-items:center;
@@ -22,18 +22,29 @@ export const Product = styled.li<{ vertical?: boolean}>`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  border: 1px solid ${theme.color.lightGrey};
+  border: 1px solid ${theme.color.macaroniAndCheese};
   border-radius: 10px;
   height: 400px;
+  transition: 300ms;
+  color: ${theme.color.macaroniAndCheese};
 
   :hover{
-    border: 1px solid ${theme.color.eerieBlack};
+    border: 1px solid ${theme.color.oceanGreen};
+    color:${theme.color.oceanGreen};
+    transform: scale(1.1);
   }
 
   ${({vertical}) => vertical && css`
   flex-direction: row;
   gap: 100px;
   padding: 30px;
+  border: none;
+
+  :hover{
+    transform: none;
+    color:${theme.color.macaroniAndCheese};
+    border: none;
+  }
 `}
 `;
 
@@ -51,10 +62,5 @@ export const Image = styled.img`
   margin-bottom: 10px;
   max-width: 250px;
   height: 300px;
-  transition: 300ms;
   background-color: inherit;
-
-  &:hover {
-    transform: scale(1.1);
-  }
 `;
