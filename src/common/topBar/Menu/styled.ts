@@ -24,4 +24,9 @@ export const Item = styled.li`
 export const Logo = styled(logo)`
 height:30px;
 fill: ${theme.color.macaroniAndCheese};
+transition: 300ms;
+
+:hover {
+  fill: ${theme.color.moonstoneBlue};
+}
 `
