@@ -12,3 +12,11 @@ export const Wrapper = styled.div`
   top: 0px;
   z-index: 1;
 `;
+
+export const RightSide = styled.div`
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
