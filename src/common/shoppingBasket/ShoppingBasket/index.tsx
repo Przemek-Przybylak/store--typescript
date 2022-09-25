@@ -1,3 +1,9 @@
+import { BasketIcon } from "./styled";
+
 export const ShoppingBasket: React.FC = () => {
-  return <>basket here</>;
+  return (
+    <>
+      <BasketIcon />
+    </>
+  );
 };
