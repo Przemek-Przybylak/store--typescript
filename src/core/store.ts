@@ -3,8 +3,7 @@ import createSagaMiddleware from "@redux-saga/core";
 import listReducer from '../featores/Homepage/AllProducts/productsSlice';
 import categoriesReducer from '../common/topBar/TopBar/TopBarSlice';
 import categoryReducer from  '../featores/categoryPage/categorySlice';
-import pathReducer from '../common/commonSlice';
-import shoppingBasketReducer from '../featores/shoppingBasket/shoppingBasketSlice';
+import commonReducer from '../common/commonSlice';
 import itemReducer from '../featores/productPage/productSlice'
 import {useDispatch} from "react-redux";
 import rootSaga from "./rootSaga";
@@ -16,9 +15,8 @@ export const store = configureStore({
         list: listReducer,
         categories: categoriesReducer,
         category: categoryReducer,
-        path: pathReducer,
+        common: commonReducer,
         item: itemReducer,
-        shoppingBasket: shoppingBasketReducer,
     },
     middleware: [sagaMiddleware],
 })
