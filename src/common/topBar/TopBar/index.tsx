@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchList, selectList } from "./TopBarSlice";
 import { useLocation, useParams } from "react-router";
 import { Button } from "../../Button";
-import { ShoppingBasket } from "../../shoppingBasket/ShoppingBasket";
+import { ShoppingBasket } from "../../../featores/shoppingBasket/ShoppingBasket";
 
 export const TopBar: React.FC = () => {
   const dispatch = useDispatch();
