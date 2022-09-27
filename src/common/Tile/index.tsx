@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "../Button";
 import { ProductsListResponse } from "../models/ProductsListResponse";
 import { StyledLink } from "../StyledLink";
 import { Image, Product, Wrapper, TextField, Span } from "./styled";
@@ -29,6 +30,7 @@ export const Tile: React.FC<props> = ({ products }) => {
             </Span>
             <Span>{products.description}</Span>
             <Span>Price: {products.price}</Span>
+            <Button />
           </TextField>
         </Product>
       ) : (
