@@ -26,7 +26,7 @@ export const Product = styled.li<{ vertical?: boolean}>`
   border-radius: 10px;
   height: 400px;
   transition: 300ms;
-  color: ${theme.color.macaroniAndCheese};
+  color: ${theme.color.eerieBlack};
 
   :hover{
     border: 1px solid ${theme.color.oceanGreen};
@@ -42,7 +42,7 @@ export const Product = styled.li<{ vertical?: boolean}>`
 
   :hover{
     transform: none;
-    color:${theme.color.macaroniAndCheese};
+    color:${theme.color.eerieBlack};
     border: none;
   }
 `}
