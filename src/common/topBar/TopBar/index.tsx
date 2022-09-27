@@ -5,7 +5,6 @@ import { RightSide, Wrapper } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchList, selectList } from "./TopBarSlice";
 import { useLocation, useParams } from "react-router";
-import { Button } from "../../Button";
 import { ShoppingBasket } from "../../../featores/shoppingBasket/ShoppingBasket";
 
 export const TopBar: React.FC = () => {
@@ -20,7 +19,7 @@ export const TopBar: React.FC = () => {
     <Wrapper>
       {categories && <Menu categoriesList={categories} />}
       <RightSide>
-        {query.pathname.includes(`product`) ? <Button /> : <Search />}
+        {!query.pathname.includes(`product`) && <Search />}
         <ShoppingBasket />
       </RightSide>
     </Wrapper>
