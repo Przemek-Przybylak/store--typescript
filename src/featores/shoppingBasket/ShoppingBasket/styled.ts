@@ -9,4 +9,9 @@ export const Wrapper = styled.div`
 export const BasketIcon = styled(Basket)`
   height: 31px;
   fill: ${theme.color.macaroniAndCheese};
+  transition: 400ms;
+
+:hover{
+  fill: ${theme.color.moonstoneBlue};
+}
 `
