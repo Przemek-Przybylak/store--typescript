@@ -1,7 +1,9 @@
+import { Wrapper } from "./styled";
+
 export const Button: React.FC = () => {
   return (
     <>
-      <button>buy</button>
+      <Wrapper>buy</Wrapper>
     </>
   );
 };
