@@ -30,7 +30,7 @@ export const Tile: React.FC<props> = ({ products }) => {
             </Span>
             <Span>{products.description}</Span>
             <Span>Price: {products.price}</Span>
-            <Button />
+            <Button product={products} />
           </TextField>
         </Product>
       ) : (
