@@ -1,12 +1,12 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import { RootState } from "../core/store";
-import { ProductsListResponse } from "./models/ProductsListResponse";
+import { basketProduct } from "./models/basket";
 import { Status } from "./models/status";
 
 type commonSliceType = {
     path: string;
     status: Status;
-    list: ProductsListResponse[]
+    list: basketProduct[],
 }
 
 
