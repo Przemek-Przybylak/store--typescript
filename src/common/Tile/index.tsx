@@ -1,3 +1,4 @@
+import { nanoid } from "@reduxjs/toolkit";
 import React from "react";
 import { Button } from "../Button";
 import { ProductsListResponse } from "../models/ProductsListResponse";
@@ -30,7 +31,13 @@ export const Tile: React.FC<props> = ({ products }) => {
             </Span>
             <Span>{products.description}</Span>
             <Span>Price: {products.price}</Span>
-            <Button product={products} />
+            <Button
+              id={products.id}
+              title={products.title}
+              price={products.price}
+              image={products.image}
+              basketID={nanoid()}
+            />
           </TextField>
         </Product>
       ) : (
