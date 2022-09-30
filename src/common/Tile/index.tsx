@@ -1,11 +1,11 @@
-import { nanoid } from "@reduxjs/toolkit";
 import React from "react";
 import { Button } from "../Button";
+import { basketProduct } from "../models/basket";
 import { ProductsListResponse } from "../models/ProductsListResponse";
 import { StyledLink } from "../StyledLink";
 import { Image, Product, Wrapper, TextField, Span } from "./styled";
 interface props {
-  products: ProductsListResponse | ProductsListResponse[];
+  products: ProductsListResponse | ProductsListResponse[] | basketProduct[];
 }
 export const Tile: React.FC<props> = ({ products }) => {
   return (
@@ -36,7 +36,6 @@ export const Tile: React.FC<props> = ({ products }) => {
               title={products.title}
               price={products.price}
               image={products.image}
-              basketID={nanoid()}
             />
           </TextField>
         </Product>
