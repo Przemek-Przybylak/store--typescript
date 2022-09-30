@@ -1,19 +1,20 @@
 import { nanoid } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../commonSlice";
-import { basketProduct } from "../models/basket";
 import { Wrapper } from "./styled";
+interface props {
+  id: number;
+  title: string;
+  price: number;
+  image: string;
+}
 
-export const Button: React.FC<basketProduct> = ({
-  id,
-  title,
-  price,
-  image,
-  basketID,
-}) => {
+export const Button: React.FC<props> = ({ id, title, price, image }) => {
   const dispatch = useDispatch();
 
   const onClick = () => {
+    const basketID = nanoid();
+
     dispatch(
       addProduct({
         id,
