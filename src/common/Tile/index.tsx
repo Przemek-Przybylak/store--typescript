@@ -1,13 +1,14 @@
 import React from "react";
 import { Button } from "../Button";
-import { basketProduct } from "../models/basket";
 import { ProductsListResponse } from "../models/ProductsListResponse";
 import { StyledLink } from "../StyledLink";
 import { Image, Product, Wrapper, TextField, Span } from "./styled";
 interface props {
-  products: ProductsListResponse | ProductsListResponse[] | basketProduct[];
+  products: ProductsListResponse | ProductsListResponse[];
 }
 export const Tile: React.FC<props> = ({ products }) => {
+  const query = window.location.hash;
+  console.log(query);
   return (
     <>
       {products instanceof Array ? (
@@ -22,7 +23,7 @@ export const Tile: React.FC<props> = ({ products }) => {
             </StyledLink>
           ))}
         </Wrapper>
-      ) : products instanceof Object ? (
+      ) : query.includes("product") ? (
         <Product vertical key={products.id}>
           <Image src={products.image} />
           <TextField>
@@ -39,6 +40,8 @@ export const Tile: React.FC<props> = ({ products }) => {
             />
           </TextField>
         </Product>
+      ) : query.includes("basket") ? (
+        <Product>nanan</Product>
       ) : (
         ""
       )}
