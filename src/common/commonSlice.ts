@@ -1,6 +1,5 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../core/store";
-import { BasketProduct } from "./models/basket";
 import { ProductsListResponse } from "./models/ProductsListResponse";
 import { Status } from "./models/status";
 
