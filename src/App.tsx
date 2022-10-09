@@ -16,7 +16,7 @@ function App() {
           <Route path="/product:id">
             <ProductPage />
           </Route>
-          <Route path="/ShoppingBasket">
+          <Route path="/basket">
             <ShoppingBasketPage />
           </Route>
           <Route path="/">
