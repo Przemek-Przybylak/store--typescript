@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectList } from "../../../common/commonSlice";
+import { Tile } from "../../../common/Tile";
 
 export const ShoppingBasketPage: React.FC = () => {
   const products = useSelector(selectList);
@@ -7,17 +8,7 @@ export const ShoppingBasketPage: React.FC = () => {
 
   return (
     <>
-      <div>
-        {products.map(({ id, title, price, image, basketID }) => (
-          <div>
-            <div>{id}</div>
-            <div>{title}</div>
-            <div>{price}</div>
-            <div>{image}</div>
-            <div>{basketID}</div>
-          </div>
-        ))}
-      </div>
+      <Tile products={products} />
     </>
   );
 };
