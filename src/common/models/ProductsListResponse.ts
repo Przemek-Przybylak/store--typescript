@@ -4,5 +4,6 @@ export type ProductsListResponse = {
     price: number,
     category: string,
     description: string,
-    image:string
+    image:string,
+    basketID: number,
 }

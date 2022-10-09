@@ -16,7 +16,8 @@ const initialState: CategoryState = {
       price: 0,
       category: "string",
       description: "string",
-      image: ""
+      image: "",
+      basketID: 0,
     },
 };
 
