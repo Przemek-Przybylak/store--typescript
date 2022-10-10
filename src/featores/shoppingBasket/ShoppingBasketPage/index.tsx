@@ -8,7 +8,9 @@ export const ShoppingBasketPage: React.FC = () => {
 
   return (
     <>
-      <Tile products={products} />
+      {products.map((product) => (
+        <Tile product={product} />
+      ))}
     </>
   );
 };

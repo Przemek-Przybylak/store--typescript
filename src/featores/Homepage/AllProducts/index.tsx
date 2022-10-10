@@ -19,10 +19,12 @@ export const AllProductsList: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <>
-      <StateChecker status={status}>
-        <Tile products={products} />
-      </StateChecker>
-    </>
+    <StateChecker status={status}>
+      <>
+        {products.map((product) => (
+          <Tile product={product} />
+        ))}
+      </>
+    </StateChecker>
   );
 };
