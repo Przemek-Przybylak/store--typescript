@@ -1,26 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Button } from "../Button";
+import { changePathname, selectPath, selectPathname } from "../commonSlice";
 import { ProductsListResponse } from "../models/ProductsListResponse";
 import { StyledLink } from "../StyledLink";
-import { Image, Product, Wrapper, TextField, Span } from "./styled";
+import { Image, Product, TextField, Span } from "./styled";
 interface props {
   product: ProductsListResponse;
 }
 
 export const Tile: React.FC<props> = ({ product }) => {
-  const query = window.location.hash;
-  console.log(query);
+  const query: string = window.location.hash;
+  const dispatch = useDispatch();
+  const path = useSelector(selectPathname);
+  console.log(path);
+  console.log("path");
+
+  useEffect(() => {
+    dispatch(changePathname(query));
+  }, [query]);
+
   return (
     <>
-      {!query.includes("basket") ? (
-        <StyledLink to={`/product:${product.id}`}>
-          <Product key={product.id}>
-            <Image src={product.image} />
-            <span>{product.title}</span>
-            <span>{product.price} $</span>
-          </Product>
-        </StyledLink>
-      ) : query.includes("product") ? (
+      {path.includes(`product`) ? (
         <Product vertical key={product.id}>
           <Image src={product.image} />
           <TextField>
@@ -37,10 +39,17 @@ export const Tile: React.FC<props> = ({ product }) => {
             />
           </TextField>
         </Product>
-      ) : query.includes("basket") ? (
+      ) : path.includes(`basket`) ? (
         <Product>product</Product>
       ) : (
-        ""
+        <StyledLink to={`/product:${product.id}`}>
+          <Product key={product.id}>
+            <Image src={product.image} />
+            <span>{product.title}</span>
+            <span></span>
+            <span>{product.price} $</span>
+          </Product>
+        </StyledLink>
       )}
     </>
   );
