@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectPath } from "../../../common/commonSlice";
+import { ProductsList } from "../../../common/ProductsList";
 import { useQueryParameter } from "../../../common/queryParamters";
 import { StateChecker } from "../../../common/StateChecker";
-import { Tile } from "../../../common/Tile";
 import { RootState } from "../../../core/store";
 import { fetchList, selectListByQuery, selectStatus } from "../categorySlice";
 
@@ -20,10 +20,8 @@ export const CategoryList: React.FC = () => {
     dispatch(fetchList());
   }, [stateQuery]);
   return (
-    <>
-      <StateChecker status={status}>
-        <Tile products={products} />
-      </StateChecker>
-    </>
+    <StateChecker status={status}>
+      <ProductsList products={products} />
+    </StateChecker>
   );
 };
