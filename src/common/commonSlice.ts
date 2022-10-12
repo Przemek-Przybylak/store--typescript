@@ -5,6 +5,7 @@ import { Status } from "./models/status";
 
 type commonSliceType = {
     path: string;
+    pathname: string;
     status: Status;
     list: ProductsListResponse[],
 }
@@ -12,6 +13,7 @@ type commonSliceType = {
 
 const initialState: commonSliceType = {
         path: "",
+        pathname: "",
         status: `initial`,
         list:
             [],
@@ -25,6 +27,9 @@ const commonSlice = createSlice({
         changePath: (state, {payload}) => {
             state.path = payload;
         },
+        changePathname: (state, {payload}) => {
+            state.pathname = payload;
+        },
         addProduct: ({list}, {payload}) => {
             list.push(payload)
         },
@@ -37,11 +42,13 @@ const commonSlice = createSlice({
 
 export const {
     changePath,
+    changePathname,
     addProduct,
     removeProduct,
 } = commonSlice.actions;
 
 export const selectPath = (state: RootState) => state.common.path;
+export const selectPathname = (state: RootState) => state.common.pathname;
 export const selectList = (state: RootState) => state.common.list;
 
 export default commonSlice.reducer;
