@@ -13,15 +13,13 @@ export const Tile: React.FC<props> = ({ product }) => {
   return (
     <>
       {!query.includes("basket") ? (
-        <Wrapper>
-          <StyledLink to={`/product:${product.id}`}>
-            <Product key={product.id}>
-              <Image src={product.image} />
-              <span>{product.title}</span>
-              <span>{product.price} $</span>
-            </Product>
-          </StyledLink>
-        </Wrapper>
+        <StyledLink to={`/product:${product.id}`}>
+          <Product key={product.id}>
+            <Image src={product.image} />
+            <span>{product.title}</span>
+            <span>{product.price} $</span>
+          </Product>
+        </StyledLink>
       ) : query.includes("product") ? (
         <Product vertical key={product.id}>
           <Image src={product.image} />
