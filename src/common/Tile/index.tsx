@@ -42,9 +42,7 @@ export const Tile: React.FC<props> = ({ product }) => {
         <Product verticalSmall key={product.id}>
           <Image src={product.image} />
           <TextField>
-            <Span>
-              <Span>{product.title}</Span>
-            </Span>
+            <Span>{product.title}</Span>
             <Span>
               Price: <strong>{product.price}</strong>
             </Span>

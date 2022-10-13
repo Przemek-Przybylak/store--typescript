@@ -48,7 +48,7 @@ export const Product = styled.li<{ vertical?: boolean, verticalSmall?: boolean}>
 
   ${({verticalSmall}) => verticalSmall && css`
   flex-direction: row;
-  gap: 100px;
+  gap: 20px;
   padding: 30px;
   height: 200px;
   border: none;
@@ -62,19 +62,21 @@ export const Product = styled.li<{ vertical?: boolean, verticalSmall?: boolean}>
 `
 
 
-export const TextField = styled.article`
+export const TextField = styled.div`
   display: flex;
+  height:100% ;
   flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const Span = styled.span`
   display: block;
-  margin: 40px 0;
+  margin:   0;
 `;
 
 export const Image = styled.img`
   margin-bottom: 10px;
   max-width: 250px;
-  height: 75%;
+  height: 100%;
   background-color: inherit;
 `;
