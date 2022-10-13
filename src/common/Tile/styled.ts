@@ -15,7 +15,7 @@ export const Wrapper = styled.ul`
   align-items:center;
 `;
 
-export const Product = styled.li<{ vertical?: boolean}>`
+export const Product = styled.li<{ vertical?: boolean, verticalSmall?: boolean}>`
   width: 100%;
   padding: 10px;
   display: flex;
@@ -44,9 +44,23 @@ export const Product = styled.li<{ vertical?: boolean}>`
     transform: none;
     color:${theme.color.eerieBlack};
     border: none;
+  }`}
+
+  ${({verticalSmall}) => verticalSmall && css`
+  flex-direction: row;
+  gap: 100px;
+  padding: 30px;
+  height: 200px;
+  border: none;
+
+  :hover{
+    transform: none;
+    color:${theme.color.eerieBlack};
+    border: none;
   }
 `}
-`;
+`
+
 
 export const TextField = styled.article`
   display: flex;
@@ -61,6 +75,6 @@ export const Span = styled.span`
 export const Image = styled.img`
   margin-bottom: 10px;
   max-width: 250px;
-  height: 300px;
+  height: 75%;
   background-color: inherit;
 `;

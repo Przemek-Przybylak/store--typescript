@@ -13,8 +13,6 @@ export const Tile: React.FC<props> = ({ product }) => {
   const query: string = window.location.hash;
   const dispatch = useDispatch();
   const path = useSelector(selectPathname);
-  console.log(path);
-  console.log("path");
 
   useEffect(() => {
     dispatch(changePathname(query));
@@ -40,7 +38,24 @@ export const Tile: React.FC<props> = ({ product }) => {
           </TextField>
         </Product>
       ) : path.includes(`basket`) ? (
-        <Product>product</Product>
+        // better styles for it
+        <Product verticalSmall key={product.id}>
+          <Image src={product.image} />
+          <TextField>
+            <Span>
+              <Span>{product.title}</Span>
+            </Span>
+            <Span>
+              Price: <strong>{product.price}</strong>
+            </Span>
+            <Button
+              id={product.id}
+              title={product.title}
+              price={product.price}
+              image={product.image}
+            />
+          </TextField>
+        </Product>
       ) : (
         <StyledLink to={`/product:${product.id}`}>
           <Product key={product.id}>
