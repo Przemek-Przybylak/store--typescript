@@ -77,6 +77,6 @@ export const Span = styled.span`
 export const Image = styled.img`
   margin-bottom: 10px;
   max-width: 250px;
-  height: 100%;
+  height: 90%;
   background-color: inherit;
 `;
