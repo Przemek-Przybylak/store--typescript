@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 import { changePath, selectPath } from "../../commonSlice";
 import { StyledLink } from "../../StyledLink";
 import { CategoriesResponse } from "../models/categoriesResponse";
-import { Wrapper, Item, Logo } from "./styled";
+import { Wrapper, Item, Logo, CategoriesFlex } from "./styled";
 
 interface props {
   categoriesList: CategoriesResponse[];
@@ -24,12 +24,14 @@ export const Menu: React.FC<props> = ({ categoriesList }) => {
         <StyledLink to={`/`}>
           <Logo />
         </StyledLink>
-        {categoriesList &&
-          categoriesList.map((category) => (
-            <Item>
-              <StyledLink to={`/category:${category}`}>{category}</StyledLink>
-            </Item>
-          ))}
+        <CategoriesFlex>
+          {categoriesList &&
+            categoriesList.map((category) => (
+              <Item>
+                <StyledLink to={`/category:${category}`}>{category}</StyledLink>
+              </Item>
+            ))}
+        </CategoriesFlex>
       </Wrapper>
     </>
   );
