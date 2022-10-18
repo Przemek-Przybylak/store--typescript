@@ -1,20 +1,6 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../core/theme";
 
-
-export const Wrapper = styled.ul`
-  display: grid;
-  align-content: center;
-  grid-template-columns: repeat(3, 1fr);
-  gap:20px;
-  margin: 20px auto;
-  list-style: none;
-  padding: 20px;
-  overflow-y: hidden;
-  max-width: 1000px;
-  align-items:center;
-`;
-
 export const Product = styled.li<{ vertical?: boolean, verticalSmall?: boolean}>`
   width: 100%;
   padding: 10px;
@@ -28,10 +14,24 @@ export const Product = styled.li<{ vertical?: boolean, verticalSmall?: boolean}>
   transition: 300ms;
   color: ${theme.color.eerieBlack};
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}) {
+    padding: 5px;
+    height: 400px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+    border: none;
+  }
+
   :hover{
     border: 1px solid ${theme.color.oceanGreen};
     color:${theme.color.oceanGreen};
     transform: scale(1.1);
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+    border: none;
+    transform: none;
+  }
   }
 
   ${({vertical}) => vertical && css`
@@ -72,6 +72,10 @@ export const TextField = styled.div`
 export const Span = styled.span`
   display: block;
   margin:   0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}) {
+    font-size: 13px;
+  }
 `;
 
 export const Image = styled.img`

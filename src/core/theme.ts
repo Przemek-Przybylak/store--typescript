@@ -7,8 +7,8 @@ export const theme = {
     lightGrey: "#dbdbdb",
     white: "white",
   },
-  breakpoint: {
+  breakpoints: {
     mobileMax: "767px",
-    tabletMax: "992px",
+    tabletMax: "1176px",
   },
 };

@@ -26,12 +26,25 @@ export const Item = styled.li`
   letter-spacing: 1.5px;
   white-space: nowrap;
   padding: 0 5px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}) {
+    font-size: 15px;
+    padding: 0 3px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+    display: none;
+  }
 `;
 
 export const Logo = styled(logo)`
 height:30px;
 fill: ${theme.color.macaroniAndCheese};
 transition: 300ms;
+
+@media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}) {
+    height: 15px;
+  }
 
 :hover {
   fill: ${theme.color.moonstoneBlue};

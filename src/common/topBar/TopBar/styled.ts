@@ -11,6 +11,10 @@ export const Wrapper = styled.div`
   color: ${theme.color.macaroniAndCheese};
   top: 0px;
   z-index: 1;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}) {
+    padding: 5px 5px 0;
+  }
 `;
 
 export const RightSide = styled.div`

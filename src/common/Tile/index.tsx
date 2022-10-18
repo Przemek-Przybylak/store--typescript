@@ -46,21 +46,15 @@ export const Tile: React.FC<props> = ({ product }) => {
             <Span>
               Price: <strong>{product.price}</strong>
             </Span>
-            <Button
-              id={product.id}
-              title={product.title}
-              price={product.price}
-              image={product.image}
-            />
           </TextField>
         </Product>
       ) : (
         <StyledLink to={`/product:${product.id}`}>
           <Product key={product.id}>
             <Image src={product.image} />
-            <span>{product.title}</span>
-            <span></span>
-            <span>{product.price} $</span>
+            <Span>{product.title}</Span>
+            <Span></Span>
+            <Span>{product.price} $</Span>
           </Product>
         </StyledLink>
       )}

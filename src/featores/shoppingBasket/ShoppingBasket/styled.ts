@@ -11,6 +11,12 @@ export const BasketIcon = styled(Basket)`
   fill: ${theme.color.macaroniAndCheese};
   transition: 400ms;
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}) {
+    height: 15px;
+  }
+
+ 
+
 :hover{
   fill: ${theme.color.moonstoneBlue};
 }

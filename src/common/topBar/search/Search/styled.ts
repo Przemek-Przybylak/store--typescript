@@ -13,6 +13,11 @@ export const Input = styled.input`
   font-size: 20px;
   color:  ${theme.color.oceanGreen} !important;
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}) {
+    padding: 2px 6px 2px 7px;
+    font-size: 15px;
+  }
+
   :hover{
     outline: 2px solid ${theme.color.macaroniAndCheese};
   }
