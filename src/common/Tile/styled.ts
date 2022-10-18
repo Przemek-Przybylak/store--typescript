@@ -40,7 +40,7 @@ export const Product = styled.li<{ vertical?: boolean, verticalSmall?: boolean}>
   padding: 30px;
   border: none;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     gap: 10px;
     padding: 10px 0;
   }
@@ -78,7 +78,7 @@ export const Span = styled.span`
   display: block;
   margin:   0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
     font-size: 13px;
     padding: 3px 0;
   }

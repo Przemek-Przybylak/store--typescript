@@ -13,7 +13,7 @@ export const Input = styled.input`
   font-size: 20px;
   color:  ${theme.color.oceanGreen} !important;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
     padding: 2px 6px 2px 7px;
     font-size: 15px;
   }

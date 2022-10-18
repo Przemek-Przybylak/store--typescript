@@ -8,7 +8,7 @@ export const theme = {
     white: "white",
   },
   breakpoints: {
-    mobileMax: "767px",
-    tabletMax: "1176px",
+    mobileMax: "767",
+    tabletMax: "1176",
   },
 };
