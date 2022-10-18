@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "../Button";
-import { changePathname, selectPath, selectPathname } from "../commonSlice";
+import { changePathname, selectPathname } from "../commonSlice";
 import { ProductsListResponse } from "../models/ProductsListResponse";
 import { StyledLink } from "../StyledLink";
 import { Image, Product, TextField, Span } from "./styled";
