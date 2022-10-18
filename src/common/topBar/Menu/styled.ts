@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../../core/theme";
 import { ReactComponent as logo } from "./pictures/logo.svg";
+import { ReactComponent as menu } from "./pictures/menu.svg";
 
 export const Wrapper = styled.ul`
   max-width: 100%;
@@ -27,12 +28,12 @@ export const Item = styled.li`
   white-space: nowrap;
   padding: 0 5px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
     font-size: 15px;
     padding: 0 3px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     display: none;
   }
 `;
@@ -42,7 +43,21 @@ height:30px;
 fill: ${theme.color.macaroniAndCheese};
 transition: 300ms;
 
-@media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}) {
+@media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
+    height: 15px;
+  }
+
+:hover {
+  fill: ${theme.color.moonstoneBlue};
+}
+`
+
+export const MenuPicture = styled(menu)`
+height:30px;
+fill: ${theme.color.macaroniAndCheese};
+transition: 300ms;
+
+@media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
     height: 15px;
   }
 
