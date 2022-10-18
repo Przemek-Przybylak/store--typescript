@@ -28,7 +28,9 @@ export const Tile: React.FC<props> = ({ product }) => {
               <Span>{product.title}</Span>
             </Span>
             <Span>{product.description}</Span>
-            <Span>Price: {product.price}</Span>
+            <Span>
+              Price: <strong>{product.price}</strong>
+            </Span>
             <Button
               id={product.id}
               title={product.title}
@@ -54,7 +56,9 @@ export const Tile: React.FC<props> = ({ product }) => {
             <Image src={product.image} />
             <Span>{product.title}</Span>
             <Span></Span>
-            <Span>{product.price} $</Span>
+            <Span>
+              <strong>{product.price}</strong> $
+            </Span>
           </Product>
         </StyledLink>
       )}

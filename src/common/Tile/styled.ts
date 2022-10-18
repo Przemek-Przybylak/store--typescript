@@ -40,6 +40,11 @@ export const Product = styled.li<{ vertical?: boolean, verticalSmall?: boolean}>
   padding: 30px;
   border: none;
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+    gap: 10px;
+    padding: 10px 0;
+  }
+
   :hover{
     transform: none;
     color:${theme.color.eerieBlack};
@@ -75,6 +80,7 @@ export const Span = styled.span`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}) {
     font-size: 13px;
+    padding: 3px 0;
   }
 `;
 
