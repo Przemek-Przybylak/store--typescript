@@ -1,44 +1,71 @@
+Store TypeScript
+
+A dynamic e-commerce storefront built to master TypeScript integration in a React application.
+
 DEMO: https://przemek-przybylak.github.io/store--typescript/
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 Project Overview
 
-## Available Scripts
+This is a sample online store where products are fetched dynamically from a mock API. Users can browse items, add them to a shopping cart, and remove items as needed. The primary goal of this project was to practice TypeScript in a React environment and understand type-safe state management.
 
-In the project directory, you can run:
+🔧 Technologies & Tools
 
-### `npm start`
+React 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+TypeScript
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Redux for state management
 
-### `npm test`
+Redux-Saga for handling asynchronous actions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Styled-Components for CSS-in-JS styling
 
-### `npm run build`
+🎯 Key Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Dynamic Product Fetching: Retrieves product data from an external (or mock) API on page load.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Shopping Cart: Add, update, and remove products with live cart state managed via Redux.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Asynchronous Flows: Utilizes Redux-Saga to handle side effects and API calls.
 
-### `npm run eject`
+Type Safety: Interfaces and types everywhere to prevent runtime errors and improve developer experience.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Responsive Design: Simple layout that works on desktop and mobile screens.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📦 Installation & Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Clone the repository:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+git clone https://github.com/Przemek-Przybylak/store--typescript.git
+cd store--typescript
+
+Install dependencies:
+
+npm install
+# or
+yarn install
+
+Run the development server:
+
+npm run dev
+# or
+yarn dev
+
+Open http://localhost:3000 in your browser.
+
+🚀 Deployment
+
+The live demo is available at: [INSERT_DEPLOYMENT_LINK_HERE]
+
+📝 What I Learned
+
+TypeScript in React: Defining interfaces for props, state, and API responses.
+
+Redux & Redux-Saga: Structuring actions, reducers, and sagas for clean async logic.
+
+Styled-Components: Writing scoped, dynamic CSS-in-JS with theme support.
+
+Best Practices: Linting, formatting, and organized folder structure for scaling
 
 ## Learn More
 
